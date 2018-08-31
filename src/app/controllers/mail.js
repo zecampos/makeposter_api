@@ -40,8 +40,7 @@ const enviarPDF =  (nome, pathArquivo) => {
       // send mail with defined transport object
       transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-          return console.log(error);
-          res.send({ msg: "Erro ao enviar" });
+          return res.send({ msg: "Erro ao enviar" });
         }
 
         console.log("Message sent: %s", info.messageId);
